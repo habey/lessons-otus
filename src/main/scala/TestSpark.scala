@@ -24,5 +24,5 @@ object JsonReader extends App {
 
   val json_read = sc.textFile("winemag-data-130k-v2.json")
   val result = json_read.map(x => parse(x).extract[User])
-  result.take(25).foreach(println)
+  result.take(100).foreach(println)
 }
